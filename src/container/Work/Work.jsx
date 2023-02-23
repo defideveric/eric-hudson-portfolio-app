@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client';
 import './Work.scss'
 import { active } from 'requests';
@@ -25,7 +25,7 @@ const Work = () => {
   })
 
 
-  //For works section buttons animation
+  //For works section filtering buttons based on category
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0}]);
@@ -39,7 +39,6 @@ const Work = () => {
         setFilterWork(works.filter((work) => work.tags.includes(item)))
       }
     }, 500);
-
   }
 
 
@@ -107,4 +106,10 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, 'work');
+
+//For changing background of sections
+export default AppWrap(
+  MotionWrap(Work, 'app__works'), 
+  'work',
+  "app__primarybg"
+);
