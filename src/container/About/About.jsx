@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client'
 import { AppWrap } from '../../wrapper';
 import { MotionWrap } from '../../wrapper';
-import './About.scss'
+import './About.scss';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -24,9 +24,6 @@ const About = () => {
       <div className='app__profiles'>
           {abouts.map((about, index) => (
             <motion.div
-            whileInView={{opacity: 1}}
-            whileHover={{scale: 1.1}}
-            transiton={{duration:0.5, type: 'tween'}}
             className='app__profile-item'
             key={about.title + index}>
             <img src={urlFor(about.imgUrl)} alt={about.title}/>

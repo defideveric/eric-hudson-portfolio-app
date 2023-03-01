@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
-import './Footer.scss'
+import './Footer.scss';
 
 //For rendering form on the page in the footer area
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
     const {name, value} = e.target;
 
     setFormData({...formData, [name]: value});
-  }
+  };
 
   //For uploading form data for submission
   const handleSubmit = () => {
@@ -27,16 +27,15 @@ const Footer = () => {
       name: name,
       email: email,
       message: message,
-    }
+    };
 
     client.create(contact)
       .then(() => {
       setLoading(false);
       setIsFormSubmitted(true);
-    })
+    });
 
-  }
-
+  };
 
 //For form structure and rendering
   return (
@@ -75,9 +74,14 @@ const Footer = () => {
        : <div>
           <h3 className='head-text'>Thank you for getting in touch.</h3>
        </div>}
+
+       <div className='copyright'>
+          <p className='p-text'>@2023 ERIC HUDSON</p>
+          <p className='p-text'> All rights reserved</p>
+        </div>
       </>
   )
-}
+};
 
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
