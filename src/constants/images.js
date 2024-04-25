@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
@@ -33,6 +34,8 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import wordpress from "../assets/wordpress.png";
+import next from "../assets/next.svg";
 
 export default {
   email,
@@ -67,4 +70,6 @@ export default {
   nb,
   skype,
   spotify,
+  wordpress,
+  next,
 };

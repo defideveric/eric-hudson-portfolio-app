@@ -40,15 +40,15 @@ const Footer = () => {
 //For form structure and rendering
   return (
       <>
-       <h2 className='head-text'>Take a coffee & chat with me</h2>
+       <h2 className='head-text'>Have a question? Message me!</h2>
        <div className='app__footer-cards'>
           <div className='app__footer-card'>
             <img src={images.email} alt ="email"/>
-            <a href="mailto:defideveric@gmail.com" className='p-text'>defideveric@gmail.com</a>
+            <a href="mailto:defideveric@gmail.com" className='p-text'>eric.phi.hudson@gmail.com</a>
           </div>
           <div className='app__footer-card'>
             <img src={images.mobile} alt ="mobile"/>
-            <a href=" +1 (123)456-7891 " className='p-text'>+1 (123) 456-7891</a>
+            <a href="(216)926-6068" className='p-text'>(216)926-6068</a>
           </div>
        </div>
 
